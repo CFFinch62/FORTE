@@ -1,0 +1,43 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environment ────────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── PyInstaller ────────────────────────────────────────────────────────────────
+build/
+dist/
+# Keep FORTE.spec under version control — it is the canonical build recipe.
+# *.spec
+
+# ── Fortran build artifacts ────────────────────────────────────────────────────
+*.mod
+*.o
+*.out
+a.out
+
+# ── Editor / IDE ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── macOS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+__MACOSX/
+
+# ── Windows ────────────────────────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+
+# ── FORTE runtime data ─────────────────────────────────────────────────────────
+# User settings are stored in ~/.config/forte/ — nothing to ignore here.
+
