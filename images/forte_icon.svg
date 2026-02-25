@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Background - cold dark night -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="60%" stop-color="#060a12"/>
+      <stop offset="100%" stop-color="#030508"/>
+    </radialGradient>
+
+    <!-- Sky behind fortress - subtle cold glow -->
+    <radialGradient id="skyGlow" cx="50%" cy="60%" r="45%">
+      <stop offset="0%" stop-color="#1a2a4a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Tower gradient - cold stone -->
+    <linearGradient id="stoneGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a2535"/>
+      <stop offset="30%" stop-color="#243045"/>
+      <stop offset="70%" stop-color="#1e2a3e"/>
+      <stop offset="100%" stop-color="#141e2e"/>
+    </linearGradient>
+
+    <!-- Battlement gradient -->
+    <linearGradient id="battleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3850"/>
+      <stop offset="100%" stop-color="#1a2535"/>
+    </linearGradient>
+
+    <!-- Gate arch torchlight -->
+    <radialGradient id="torchGlow" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#4488ff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#2255cc" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- F glow gradient -->
+    <radialGradient id="fGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#aaccff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2255cc" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Silver edge highlight -->
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a6080"/>
+      <stop offset="50%" stop-color="#8aaac0"/>
+      <stop offset="100%" stop-color="#3a5070"/>
+    </linearGradient>
+
+    <!-- Ground/base gradient -->
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2535"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="stoneGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="fTextGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="punctGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="archGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="edgeGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip paths -->
+    <clipPath id="leftTowerClip">
+      <rect x="48" y="88" width="96" height="248"/>
+    </clipPath>
+    <clipPath id="rightTowerClip">
+      <rect x="256" y="88" width="96" height="248"/>
+    </clipPath>
+    <clipPath id="gatehouseClip">
+      <rect x="144" y="160" width="112" height="176"/>
+    </clipPath>
+    <clipPath id="archClip">
+      <path d="M 158 340 L 158 240 Q 158 200 200 200 Q 242 200 242 240 L 242 340 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)" rx="40"/>
+
+  <!-- Sky glow behind fortress -->
+  <rect width="400" height="400" fill="url(#skyGlow)" rx="40"/>
+
+  <!-- Ground base -->
+  <rect x="40" y="332" width="320" height="32" rx="2"
+        fill="url(#groundGrad)" stroke="#3a5070" stroke-width="1" opacity="0.8"/>
+  <!-- Ground texture -->
+  <g font-family="monospace" font-size="9" fill="#2a4060" opacity="0.5">
+    <text x="48" y="346">= () = ** = () = ** = () = ** = () = **</text>
+    <text x="48" y="358">** = () ** = () ** = () ** = () ** = ()</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LEFT TOWER                                                    -->
+  <!-- ============================================================ -->
+
+  <!-- Tower body -->
+  <rect x="48" y="100" width="96" height="232"
+        fill="url(#stoneGrad)" stroke="#3a5878" stroke-width="1.5"
+        filter="url(#stoneGlow)"/>
+
+  <!-- Left tower Fortran syntax stonework -->
+  <g clip-path="url(#leftTowerClip)" font-family="monospace" font-size="10"
+     filter="url(#punctGlow)">
+    <text x="50" y="118" fill="#4a6888" opacity="0.85">= ** () ! =</text>
+    <text x="50" y="132" fill="#3a5878" opacity="0.75">() ! = ** ()</text>
+    <text x="50" y="146" fill="#4a6888" opacity="0.82">** = () ! **</text>
+    <text x="50" y="160" fill="#3a5878" opacity="0.75">! () ** = !</text>
+    <text x="50" y="174" fill="#4a6888" opacity="0.80">= ** () ! =</text>
+    <text x="50" y="188" fill="#3a5878" opacity="0.72">() ! = ** ()</text>
+    <text x="50" y="202" fill="#4a6888" opacity="0.80">** = () ! **</text>
+    <text x="50" y="216" fill="#3a5878" opacity="0.72">! () ** = !</text>
+    <text x="50" y="230" fill="#4a6888" opacity="0.78">= ** () ! =</text>
+    <text x="50" y="244" fill="#3a5878" opacity="0.70">() ! = ** ()</text>
+    <text x="50" y="258" fill="#4a6888" opacity="0.78">** = () ! **</text>
+    <text x="50" y="272" fill="#3a5878" opacity="0.70">! () ** = !</text>
+    <text x="50" y="286" fill="#4a6888" opacity="0.75">= ** () ! =</text>
+    <text x="50" y="300" fill="#3a5878" opacity="0.68">() ! = ** ()</text>
+    <text x="50" y="314" fill="#4a6888" opacity="0.75">** = () ! **</text>
+    <text x="50" y="328" fill="#3a5878" opacity="0.68">! () ** = !</text>
+  </g>
+
+  <!-- Left tower edge highlight -->
+  <line x1="48" y1="100" x2="48" y2="332" stroke="#6a90b8" stroke-width="1.5" opacity="0.4"/>
+  <line x1="144" y1="100" x2="144" y2="332" stroke="#3a5878" stroke-width="1" opacity="0.3"/>
+
+  <!-- LEFT TOWER BATTLEMENTS -->
+  <!-- Merlons (solid teeth) and crenels (gaps) -->
+  <g fill="url(#battleGrad)" stroke="#3a5878" stroke-width="1.2">
+    <rect x="48"  y="72" width="18" height="30" rx="1"/>
+    <rect x="76"  y="72" width="18" height="30" rx="1"/>
+    <rect x="104" y="72" width="18" height="30" rx="1"/>
+    <rect x="132" y="72" width="12" height="30" rx="1"/>
+  </g>
+  <!-- Battlement top line -->
+  <line x1="48" y1="100" x2="144" y2="100" stroke="#6a90b8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left tower window -->
+  <rect x="82" y="145" width="28" height="38" rx="12"
+        fill="#0a1525" stroke="#3a5878" stroke-width="1.2"/>
+  <ellipse cx="96" cy="150" rx="10" ry="5"
+           fill="none" stroke="#2255aa" stroke-width="0.8" opacity="0.5"/>
+  <!-- Window glow -->
+  <rect x="83" y="146" width="26" height="36" rx="11"
+        fill="#1a3060" opacity="0.3"/>
+
+  <!-- Left tower narrow windows (arrow slits) -->
+  <rect x="70"  y="210" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="118" y="210" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="70"  y="270" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="118" y="270" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT TOWER                                                   -->
+  <!-- ============================================================ -->
+
+  <!-- Tower body -->
+  <rect x="256" y="100" width="96" height="232"
+        fill="url(#stoneGrad)" stroke="#3a5878" stroke-width="1.5"
+        filter="url(#stoneGlow)"/>
+
+  <!-- Right tower Fortran syntax stonework -->
+  <g clip-path="url(#rightTowerClip)" font-family="monospace" font-size="10"
+     filter="url(#punctGlow)">
+    <text x="258" y="118" fill="#4a6888" opacity="0.85">! = ** () !</text>
+    <text x="258" y="132" fill="#3a5878" opacity="0.75">** () ! = **</text>
+    <text x="258" y="146" fill="#4a6888" opacity="0.82">() ! = ** ()</text>
+    <text x="258" y="160" fill="#3a5878" opacity="0.75">= ** () ! =</text>
+    <text x="258" y="174" fill="#4a6888" opacity="0.80">! = ** () !</text>
+    <text x="258" y="188" fill="#3a5878" opacity="0.72">** () ! = **</text>
+    <text x="258" y="202" fill="#4a6888" opacity="0.80">() ! = ** ()</text>
+    <text x="258" y="216" fill="#3a5878" opacity="0.72">= ** () ! =</text>
+    <text x="258" y="230" fill="#4a6888" opacity="0.78">! = ** () !</text>
+    <text x="258" y="244" fill="#3a5878" opacity="0.70">** () ! = **</text>
+    <text x="258" y="258" fill="#4a6888" opacity="0.78">() ! = ** ()</text>
+    <text x="258" y="272" fill="#3a5878" opacity="0.70">= ** () ! =</text>
+    <text x="258" y="286" fill="#4a6888" opacity="0.75">! = ** () !</text>
+    <text x="258" y="300" fill="#3a5878" opacity="0.68">** () ! = **</text>
+    <text x="258" y="314" fill="#4a6888" opacity="0.75">() ! = ** ()</text>
+    <text x="258" y="328" fill="#3a5878" opacity="0.68">= ** () ! =</text>
+  </g>
+
+  <!-- Right tower edge highlights -->
+  <line x1="256" y1="100" x2="256" y2="332" stroke="#3a5878" stroke-width="1" opacity="0.3"/>
+  <line x1="352" y1="100" x2="352" y2="332" stroke="#6a90b8" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- RIGHT TOWER BATTLEMENTS -->
+  <g fill="url(#battleGrad)" stroke="#3a5878" stroke-width="1.2">
+    <rect x="256" y="72" width="12" height="30" rx="1"/>
+    <rect x="278" y="72" width="18" height="30" rx="1"/>
+    <rect x="306" y="72" width="18" height="30" rx="1"/>
+    <rect x="334" y="72" width="18" height="30" rx="1"/>
+  </g>
+  <line x1="256" y1="100" x2="352" y2="100" stroke="#6a90b8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Right tower window -->
+  <rect x="290" y="145" width="28" height="38" rx="12"
+        fill="#0a1525" stroke="#3a5878" stroke-width="1.2"/>
+  <ellipse cx="304" cy="150" rx="10" ry="5"
+           fill="none" stroke="#2255aa" stroke-width="0.8" opacity="0.5"/>
+  <rect x="291" y="146" width="26" height="36" rx="11"
+        fill="#1a3060" opacity="0.3"/>
+
+  <!-- Right tower arrow slits -->
+  <rect x="274" y="210" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="322" y="210" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="274" y="270" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+  <rect x="322" y="270" width="8" height="22" rx="3" fill="#0a1525" stroke="#2a4060" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- CENTRAL GATEHOUSE                                             -->
+  <!-- ============================================================ -->
+
+  <!-- Gatehouse body -->
+  <rect x="144" y="172" width="112" height="160"
+        fill="url(#stoneGrad)" stroke="#3a5878" stroke-width="1.5"
+        filter="url(#stoneGlow)"/>
+
+  <!-- Gatehouse Fortran stonework -->
+  <g clip-path="url(#gatehouseClip)" font-family="monospace" font-size="10"
+     filter="url(#punctGlow)">
+    <text x="146" y="188" fill="#4a6888" opacity="0.7">= ** () !</text>
+    <text x="146" y="202" fill="#3a5878" opacity="0.6">() ! = **</text>
+    <text x="146" y="216" fill="#4a6888" opacity="0.65">** = () !</text>
+    <!-- Side strips only below arch -->
+    <text x="146" y="268" fill="#4a6888" opacity="0.6">= *</text>
+    <text x="222" y="268" fill="#4a6888" opacity="0.6">! =</text>
+    <text x="146" y="284" fill="#3a5878" opacity="0.55">()!</text>
+    <text x="222" y="284" fill="#3a5878" opacity="0.55">*()</text>
+    <text x="146" y="300" fill="#4a6888" opacity="0.6">**=</text>
+    <text x="222" y="300" fill="#4a6888" opacity="0.6">!**</text>
+    <text x="146" y="316" fill="#3a5878" opacity="0.55">! ()</text>
+    <text x="222" y="316" fill="#3a5878" opacity="0.55">= !</text>
+  </g>
+
+  <!-- GATEHOUSE BATTLEMENTS -->
+  <g fill="url(#battleGrad)" stroke="#3a5878" stroke-width="1.2">
+    <rect x="144" y="144" width="16" height="30" rx="1"/>
+    <rect x="170" y="144" width="16" height="30" rx="1"/>
+    <rect x="196" y="144" width="16" height="30" rx="1"/>
+    <rect x="222" y="144" width="16" height="30" rx="1"/>
+    <rect x="240" y="144" width="16" height="30" rx="1"/>
+  </g>
+  <line x1="144" y1="172" x2="256" y2="172" stroke="#6a90b8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Connecting walls between towers and gatehouse -->
+  <!-- Left connecting wall -->
+  <rect x="144" y="200" width="0" height="132" fill="none"/>
+  <!-- Right connecting wall -->
+  <rect x="256" y="200" width="0" height="132" fill="none"/>
+
+  <!-- ============================================================ -->
+  <!-- ARCH GATEWAY                                                  -->
+  <!-- ============================================================ -->
+
+  <!-- Arch torchlight glow behind -->
+  <path d="M 162 335 L 162 248 Q 162 208 200 208 Q 238 208 238 248 L 238 335 Z"
+        fill="url(#torchGlow)" filter="url(#archGlow)"/>
+
+  <!-- Arch opening - dark interior -->
+  <path d="M 164 335 L 164 250 Q 164 212 200 212 Q 236 212 236 250 L 236 335 Z"
+        fill="#060a12"/>
+
+  <!-- Portcullis bars - vertical ! characters and horizontal lines -->
+  <g font-family="monospace" font-size="12" fill="#1a3060"
+     filter="url(#punctGlow)" opacity="0.7">
+    <text x="168" y="330">!</text>
+    <text x="182" y="330">!</text>
+    <text x="196" y="330">!</text>
+    <text x="210" y="330">!</text>
+    <text x="224" y="330">!</text>
+    <text x="168" y="318">!</text>
+    <text x="182" y="318">!</text>
+    <text x="196" y="318">!</text>
+    <text x="210" y="318">!</text>
+    <text x="224" y="318">!</text>
+    <text x="168" y="306">!</text>
+    <text x="182" y="306">!</text>
+    <text x="196" y="306">!</text>
+    <text x="210" y="306">!</text>
+    <text x="224" y="306">!</text>
+  </g>
+  <!-- Portcullis horizontal bars -->
+  <g stroke="#1a3060" stroke-width="1.5" opacity="0.5">
+    <line x1="165" y1="270" x2="235" y2="270"/>
+    <line x1="165" y1="285" x2="235" y2="285"/>
+    <line x1="165" y1="300" x2="235" y2="300"/>
+    <line x1="165" y1="315" x2="235" y2="315"/>
+  </g>
+
+  <!-- Arch stone surround -->
+  <path d="M 162 335 L 162 248 Q 162 206 200 206 Q 238 206 238 248 L 238 335"
+        fill="none" stroke="url(#silverGrad)" stroke-width="3" opacity="0.7"/>
+  <!-- Inner arch edge -->
+  <path d="M 166 335 L 166 250 Q 166 212 200 212 Q 234 212 234 250 L 234 335"
+        fill="none" stroke="#2a4060" stroke-width="1" opacity="0.5"/>
+
+  <!-- Keystone at arch apex -->
+  <path d="M 192 206 L 200 198 L 208 206 Z"
+        fill="#2a3850" stroke="#6a90b8" stroke-width="1" opacity="0.8"/>
+
+  <!-- ============================================================ -->
+  <!-- F - glowing in arch                                          -->
+  <!-- ============================================================ -->
+
+  <!-- F glow halo -->
+  <circle cx="200" cy="248" r="32" fill="url(#fGlow)" opacity="0.25"/>
+
+  <!-- F glow layer -->
+  <text x="200" y="268"
+        font-family="Georgia, serif"
+        font-size="58"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#4488ff"
+        filter="url(#fTextGlow)"
+        opacity="0.4">F</text>
+
+  <!-- F main -->
+  <text x="200" y="268"
+        font-family="Georgia, serif"
+        font-size="58"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#ffffff"
+        filter="url(#fTextGlow)">F</text>
+
+  <!-- Subtle torch brackets flanking arch base -->
+  <g font-family="monospace" font-size="11" fill="#2255aa"
+     filter="url(#punctGlow)" opacity="0.6">
+    <text x="148" y="340">**</text>
+    <text x="238" y="340">**</text>
+  </g>
+
+</svg>
