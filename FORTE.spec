@@ -5,7 +5,7 @@ a = Analysis(
     ['forte/main.py'],
     pathex=[],
     binaries=[],
-    datas=[('/home/chuck/Dropbox/Programming/Languages_and_Code/Programming_Projects/Programming_Tools/IDES/IDE_Suite 2/FORTE/venv/lib/python3.13/site-packages/pyte', 'pyte'), ('/home/chuck/Dropbox/Programming/Languages_and_Code/Programming_Projects/Programming_Tools/IDES/IDE_Suite 2/FORTE/venv/lib/python3.13/site-packages/ptyprocess', 'ptyprocess'), ('images', 'images'), ('examples', 'examples')],
+    datas=[('/home/chuck/Dropbox/Programming/Languages_and_Code/Programming_Projects/Programming_Tools/IDES/IDE_Suite 2/FORTE/venv/lib/python3.12/site-packages/pyte', 'pyte'), ('/home/chuck/Dropbox/Programming/Languages_and_Code/Programming_Projects/Programming_Tools/IDES/IDE_Suite 2/FORTE/venv/lib/python3.12/site-packages/ptyprocess', 'ptyprocess'), ('images', 'images'), ('examples', 'examples')],
     hiddenimports=['PyQt6'],
     hookspath=[],
     hooksconfig={},
